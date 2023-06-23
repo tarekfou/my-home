@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #mapContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #mapContainer iframe {
+            width: 800px;
+            height: 500px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Home</h1>
+    </header>
+    <div id="mapContainer">
+        <iframe width="800" height="500" frameborder="0" src="https://www.bing.com/maps/embed?h=500&w=800&cp=30.0630676748835~31.557033633338165&lvl=16.84191723589481&typ=d&sty=h&src=SHELL&FORM=MBEDV8" scrolling="no"></iframe>
+        <div style="white-space: nowrap; text-align: center; width: 800px; padding: 6px 0;">
+            <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=30.0630676748835~31.557033633338165&amp;sty=h&amp;lvl=16.84191723589481&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+            <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=30.0630676748835~31.557033633338165&amp;sty=h&amp;lvl=16.84191723589481&amp;rtp=~pos.30.0630676748835_31.557033633338165____&amp;FORM=MBEDLD">Get Directions</a>
+        </div>
+    </div>
+</body>
+</html>
