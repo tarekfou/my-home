@@ -22,12 +22,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             height: 100vh;
         }
 
-        #mapContainer iframe {
+        .map-container {
             width: 800px;
             height: 500px;
+            margin: 10px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
             border: 0;
         }
 
@@ -56,8 +63,7 @@
                 padding: 20px;
             }
 
-            #mapContainer iframe,
-            .gmap_iframe {
+            .map-container {
                 width: 100%;
                 height: 300px;
             }
@@ -69,16 +75,20 @@
         <h1>My Home</h1>
     </header>
     <div id="mapContainer">
-        <iframe width="800" height="500" frameborder="0" src="https://www.bing.com/maps/embed?h=500&w=800&cp=30.0630676748835~31.557033633338165&lvl=16.84191723589481&typ=d&sty=h&src=SHELL&FORM=MBEDV8" scrolling="no"></iframe>
-        <div class="mapouter">
-            <div class="gmap_canvas">
-                <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                <a href="https://gachanox.io/">Gacha Nox</a>
+        <div class="map-container">
+            <iframe width="800" height="500" frameborder="0" src="https://www.bing.com/maps/embed?h=500&w=800&cp=30.0630676748835~31.557033633338165&lvl=16.84191723589481&typ=d&sty=h&src=SHELL&FORM=MBEDV8" scrolling="no"></iframe>
+            <div style="white-space: nowrap; text-align: center; width: 800px; padding: 6px 0;">
+                <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=30.0630676748835~31.557033633338165&amp;sty=h&amp;lvl=16.84191723589481&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+                <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=30.0630676748835~31.557033633338165&amp;sty=h&amp;lvl=16.84191723589481&amp;rtp=~pos.30.0630676748835_31.557033633338165____&amp;FORM=MBEDLD">Get Directions</a>
             </div>
         </div>
-        <div style="white-space: nowrap; text-align: center; width: 800px; padding: 6px 0;">
-            <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=30.0630676748835~31.557033633338165&amp;sty=h&amp;lvl=16.84191723589481&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
-            <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=30.0630676748835~31.557033633338165&amp;sty=h&amp;lvl=16.84191723589481&amp;rtp=~pos.30.0630676748835_31.557033633338165____&amp;FORM=MBEDLD">Get Directions</a>
+        <div class="map-container">
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    <a href="https://gachanox.io/">Gacha Nox</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
